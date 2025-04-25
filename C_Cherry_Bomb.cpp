@@ -32,6 +32,12 @@ void solve()
 
     for(int i = 1;i <= n;i++) cin >> b[i];
 
+    if(n == 1)
+    {
+        cout << k + 1 << endl;
+        return;
+    }
+
     LL last = -2;
     for(int i = 1;i <= n;i++)
     {

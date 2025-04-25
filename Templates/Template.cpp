@@ -7,6 +7,7 @@ using namespace std;
 #define cy puts("Yes")
 #define cn puts("No")
 #define lowbit(x) (x & (-x))
+#define endl '\n'
 
 typedef long long LL;
 typedef pair<int,int> PII;

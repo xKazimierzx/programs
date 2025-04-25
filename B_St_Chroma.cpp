@@ -7,6 +7,7 @@ using namespace std;
 #define cy puts("Yes")
 #define cn puts("No")
 #define lowbit(x) (x & (-x))
+#define endl '\n'
 
 typedef long long LL;
 typedef pair<int,int> PII;
@@ -21,23 +22,24 @@ const double EPS = 1e-8;
 
 void solve()
 {
-    int n, x;
+    int n,x;
     cin >> n >> x;
-    vector<int> p;
     
-    if (x == 0) {
-        for (int i = 1; i < n; i++) p.push_back(i);
-        p.push_back(0);
-    } else if (x == n) {
-        for (int i = 0; i < n; i++) p.push_back(i);
-    } else 
+    if(n == x)
     {
-        for (int i = 0; i < x; i++) p.push_back(i);
-        for (int i = x + 1; i < n; i++) p.push_back(i);
-        p.push_back(x);
+        for(int i = 0;i < n;i++) cout << i << ' ';
+        cout << endl;
+        return;
     }
+
+    vector<int> a(n);
+    a[n - 1] = x;
+
+    for(int i = 0;i < n - 1;i++)
+        if(i < x) a[i] = i;
+        else a[i] = i + 1;
     
-    for (int x : p) cout << x << " ";
+    for(auto i:a) cout << i << ' ';
     cout << endl;
 }
 

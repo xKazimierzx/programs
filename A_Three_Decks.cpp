@@ -22,7 +22,35 @@ const double EPS = 1e-8;
 
 void solve()
 {
+    vector<int> a(3);
+    int res = 0;
+    for(int i = 0;i < 3;i++) cin >> a[i],res += a[i];
     
+    if(res % 3)
+    {
+        cn;
+        return;
+    }
+
+    res /= 3;
+    for(int i = 0;i < 2;i++)
+        if(a[i] > res)
+        {
+            cn;
+            return;
+        }
+        else if(a[i] == res) continue;
+        else if(a[i] < res)
+        {
+            if(a[2] > res - a[i]) a[2] -= (res - a[i]);
+            else
+            {
+                cn;
+                return;
+            }
+        }
+        
+    cy;
 }
 
 int main()

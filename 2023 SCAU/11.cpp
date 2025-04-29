@@ -4,8 +4,8 @@ using namespace std;
 #define x first
 #define y second
 #define debug(x) cout << x << endl
-#define cy puts("YES")
-#define cn puts("NO")
+#define cy puts("Yes")
+#define cn puts("No")
 #define lowbit(x) (x & (-x))
 #define endl '\n'
 
@@ -28,7 +28,7 @@ void solve()
 int main()
 {
     int T = 1;
-    cin >> T;
+    //cin >> T;
     while(T--) solve();
     return 0;
 }

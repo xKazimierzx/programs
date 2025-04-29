@@ -4,8 +4,8 @@ using namespace std;
 #define x first
 #define y second
 #define debug(x) cout << x << endl
-#define cy puts("YES")
-#define cn puts("NO")
+#define cy puts("Yes")
+#define cn puts("No")
 #define lowbit(x) (x & (-x))
 #define endl '\n'
 
@@ -22,7 +22,23 @@ const double EPS = 1e-8;
 
 void solve()
 {
-    
+    string s;
+    cin >> s;
+
+    int n = s.length();
+    map<char,int> h;
+    for(auto i:s) h[i]++;
+
+    for(int i = 0;i < n;i++)
+    {
+        for(int j = 9 - i;j <= 9;j++)
+            if(h[j + '0'])
+            {
+                s[i] = j + '0',h[j + '0']--;
+                break;
+            }
+    }
+    cout << s << endl;
 }
 
 int main()

@@ -22,7 +22,24 @@ const double EPS = 1e-8;
 
 void solve()
 {
-    
+    int n;
+    cin >> n;
+    vector<LL> a(n+1),suf(n+2),maxv(n+1);
+    LL t = 0;
+    for(int i = 1;i <= n;i++)
+    {
+        cin >> a[i];
+        t = max(t,a[i]);
+        maxv[i] = t;
+    }
+    for(int i = n;i >= 1;i--) suf[i] = suf[i+1] + a[i];
+
+    for(int i = n;i >= 1;i--)
+    {
+        if(maxv[i] > a[i]) cout << suf[i+1] + maxv[i] << ' ';
+        else cout << suf[i] << ' ';
+    }
+    cout << endl;
 }
 
 int main()

@@ -29,9 +29,29 @@ const double PI = acos(-1);
 const double EPS = 1e-8;
 const int DEP = 31;
 
+int n,k;
+PII a[N];
+
+bool check(int x)
+{
+    int res = 0;
+    for(int i = 0;i < n;i++) res += (a[i].x / x) + (a[i].y / x);
+    return res >= k;
+}
+
 void solve()
 {
+    cin >> n >> k;
+    for(int i = 0;i < n;i++) cin >> a[i].x >> a[i].y;
     
+    int l = 0,r = 1e5 + 1;
+    while(l + 1 != r)
+    {
+        int mid = l + r >> 1;
+        if(check(mid)) l = mid;
+        else r = mid;
+    }
+    cout << l << endl;
 }
 
 int main()

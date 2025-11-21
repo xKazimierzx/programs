@@ -31,7 +31,22 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    int n,m,l;
+    cin >> n >> m >> l;
+    vector<LL> a(n),b(m),c(l);
+    for(int i = 0;i < n;i++) cin >> a[i];
+    for(int i = 0;i < m;i++) cin >> b[i];
+    for(int i = 0;i < l;i++) cin >> c[i];
+    int i = 0,j = 0,k = 0;
+    LL ans = LONG_LONG_MAX;
+    while(i < n && j < m && k < l)
+    {
+        ans = min(ans,max(max(a[i],b[j]),c[k]) - min(min(a[i],b[j]),c[k]));
+        if(a[i] <= b[j] && a[i] <= c[k]) i++;
+        else if(b[j] <= a[i] && b[j] <= c[k]) j++;
+        else k++;
+    }
+    cout << 2ll * ans << endl;
 }
 
 int main()

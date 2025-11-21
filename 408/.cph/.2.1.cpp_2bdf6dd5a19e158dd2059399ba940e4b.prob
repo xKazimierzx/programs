@@ -1,0 +1,1 @@
+{"name":"Local: 2","url":"e:\\programs\\408\\2.1.cpp","tests":[{"id":1762537801439,"input":"4 8\nempty\npush 1\npush 2\npush 3\npop\npush 4\nempty","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\programs\\408\\2.1.cpp","group":"local","local":true}

@@ -7,8 +7,8 @@ using namespace std;
 #define lowbit(x) (x & (-x))
 #define bp(x) __builtin_poptount(x)
 #define bpll(x) __builtin_poptountll(x)
-#define rep(i,a,b) for(int i = a;i <= b;++i)
-#define rep_(i,a,b) for(int i = a;i >= b;--i)
+#define rep(i,a,b) for(int i=a;i<=b;i++)
+#define rep_(i,a,b) for(int i=a;i>=b;i--)
 #define debug(x) cout << x << '\n'
 #define cy cout << "Yes" << '\n'
 #define cn cout << "No" << '\n'
@@ -27,18 +27,28 @@ const int N = 1e5 + 10;
 const int MOD = 998244353;
 const double PI = acos(-1);
 const double EPS = 1e-8;
-const int DEP = 31;
+
+bool check(int x)
+{
+    if(x == 1) return false;
+    for(int i = 2;i <= x / i;i++)
+        if(x % i == 0) return false;
+    return true;
+}
 
 void solve()
 {
-    
+    int x;
+    cin >> x;
+    if(check(x)) cy;
+    else cn;
 }
 
 int main()
 {
     ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
     int T = 1;
-    //cin >> T;
+    cin >> T;
     while(T--) solve();
     return 0;
 }

@@ -29,9 +29,63 @@ const double PI = acos(-1);
 const double EPS = 1e-8;
 const int DEP = 31;
 
+int a[N];
+int top = -1;
+int n,m;
+
+bool isEmpty()
+{
+    if(top == -1) return true;
+    return false;
+}
+
+bool isFull()
+{
+    if(top == n - 1) return true;
+    return false;
+}
+
+bool push(int x)
+{
+    if(isFull()) return false;
+    a[++top] = x;
+    return true;
+}
+
+int pop()
+{
+    if(!isEmpty()) return a[top--];
+}
+
 void solve()
 {
-    
+    cin >> n >> m;
+    while(m--)
+    {
+        string op;
+        cin >> op;
+
+        if(op == "push")
+        {
+            int x;
+            cin >> x;
+            push(x);
+        }
+        else if(op == "pop")
+        {
+            pop();
+        }
+        else if(op == "empty")
+        {
+            cout << isEmpty() << endl;
+        }
+        else if(op == "full")
+        {
+            cout << isFull() << endl;
+        }
+    }
+
+    for(int i = 0;i <= top;i++) cout << a[i] << ' ';
 }
 
 int main()

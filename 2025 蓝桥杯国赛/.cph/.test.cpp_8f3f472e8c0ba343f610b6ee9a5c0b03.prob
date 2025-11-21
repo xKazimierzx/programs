@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"e:\\programs\\2025 蓝桥杯国赛\\test.cpp","tests":[{"id":1747588717521,"input":"6 8\n1 2\n1 3\n1 4\n2 5\n5 3\n3 4\n5 6\n6 4","output":"1 2 5 3 4 6 \n1 2 3 4 5 6 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\programs\\2025 蓝桥杯国赛\\test.cpp","group":"local","local":true}

@@ -29,9 +29,56 @@ const double PI = acos(-1);
 const double EPS = 1e-8;
 const int DEP = 31;
 
+int tree[N];
+int root = 1,n,m;
+
+int findFather(int u)
+{
+    if(u == 1) return -1;
+    return tree[u >> 1];
+}
+
+int getLeft(int u)
+{
+    return tree[u << 1];
+}
+
+int getRight(int u)
+{
+    return tree[u << 1 | 1];
+}
+
+void preOrder(int u)
+{
+    if(u > n) return;
+    cout << tree[u] << ' ';
+    preOrder(u << 1);
+    preOrder(u << 1 | 1);
+}
+
+void midOrder(int u)
+{
+    if(u > n) return;
+    midOrder(u << 1);
+    cout << tree[u] << ' ';
+    midOrder(u << 1 | 1);
+}
+
+void postOrder(int u)
+{
+    if(u > n) return;
+    postOrder(u << 1);
+    postOrder(u << 1 | 1);
+    cout << tree[u] << ' ';
+}
+
 void solve()
 {
-    
+    cin >> n;
+    for(int i = 1;i <= n;i++) cin >> tree[i];
+    preOrder(root); cout << endl;
+    midOrder(root); cout << endl;
+    postOrder(root); cout << endl;
 }
 
 int main()

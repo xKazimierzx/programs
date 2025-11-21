@@ -7,8 +7,8 @@ using namespace std;
 #define lowbit(x) (x & (-x))
 #define bp(x) __builtin_poptount(x)
 #define bpll(x) __builtin_poptountll(x)
-#define rep(i,a,b) for(int i = a;i <= b;++i)
-#define rep_(i,a,b) for(int i = a;i >= b;--i)
+#define rep(i,a,b) for(int i=a;i<=b;i++)
+#define rep_(i,a,b) for(int i=a;i>=b;i--)
 #define debug(x) cout << x << '\n'
 #define cy cout << "Yes" << '\n'
 #define cn cout << "No" << '\n'
@@ -31,7 +31,7 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    cout << 0 << endl;
 }
 
 int main()

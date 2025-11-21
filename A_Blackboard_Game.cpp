@@ -31,14 +31,21 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    int n;
+    cin >> n;
+    int a0 = (n + 3) / 4;
+    int a1 = (n + 2) / 4;
+    int a2 = (n + 1) / 4;
+    int a3 = n / 4;
+    if (a0 == a3 && a1 == a2) cout << "Bob\n";
+    else  cout << "Alice\n";
 }
 
 int main()
 {
     ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
     int T = 1;
-    //cin >> T;
+    cin >> T;
     while(T--) solve();
     return 0;
 }

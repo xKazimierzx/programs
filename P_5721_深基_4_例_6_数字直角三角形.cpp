@@ -31,7 +31,22 @@ const int DEP = 31;
 
 void solve()
 {
+    int n;
+    cin >> n;
     
+    int last = 1;
+    for(int k = 0;k < n;k++)
+    {   
+        int res;
+        for(int i = last,j = 0;j < n - k;i++,j++)
+        {
+            if(i <= 9) cout << 0 << i;
+            else cout << i;
+            if(j == n - k - 1) res = i;
+        }
+        cout << endl;
+        last = res + 1;
+    }
 }
 
 int main()

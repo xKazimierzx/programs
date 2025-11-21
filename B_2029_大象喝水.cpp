@@ -31,7 +31,10 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    double h,r;
+    cin >> h >> r;
+    double ans = 20000.0 / (h * 3.14 * r * r);
+    cout << ceil(ans) << endl;
 }
 
 int main()

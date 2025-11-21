@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"e:\\programs\\2025 icpc xian\\test.cpp","tests":[{"id":1746612482733,"input":"10\n1 10\n1 5\n4 8\n10 6\n10 7\n10 9\n5 2\n2 3\n2 4\n4\n6 8\n1 9\n10 2\n2 3","output":"2\n1\n2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\programs\\2025 icpc xian\\test.cpp","group":"local","local":true}

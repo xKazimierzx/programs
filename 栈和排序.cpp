@@ -31,7 +31,23 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    int n;
+    cin >> n;
+    vector<int> a(n + 1);
+    vector<int> maxv(n + 2);
+    rep(i,1,n) cin >> a[i];
+    for(int i = n;i >= 1; i--) maxv[i] = max(a[i],maxv[i + 1]);
+
+    stack<int> h;
+    for(int i = 1;i <= n;i++)
+    {
+        h.push(a[i]);
+        while(h.size() && h.top() > maxv[i + 1])
+        {
+            cout << h.top() << ' ';
+            h.pop();
+        }
+    }
 }
 
 int main()

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7b5a6b0c-214e-4c6d-80f4-201b0dfa7fb0" name="UnityServer">
+        <fileTransfer accessType="SFTP" host="43.139.61.167" port="22" sshConfigId="dbeca40e-b4b6-4a93-acb5-fd92575c68f5" sshConfig="ubuntu@43.139.61.167:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" isUseSudo="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

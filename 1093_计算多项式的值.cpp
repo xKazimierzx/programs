@@ -31,12 +31,17 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    float x,res = 1,tmp;
+    int n;
+    cin >> x >> n;
+    tmp = x;
+    for(int i = 1;i <= n;i++) res += tmp,tmp *= x;
+    printf("%.2lf",res);
 }
 
 int main()
 {
-    ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+    //ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
     int T = 1;
     //cin >> T;
     while(T--) solve();

@@ -22,7 +22,11 @@
     "text_encoding": "cpp",
     "regex": "cpp",
     "valarray": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "tuple": "cpp",
+    "iomanip": "cpp",
+    "random": "cpp",
+    "complex": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

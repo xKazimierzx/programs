@@ -15,7 +15,7 @@ typedef pair<PII,int> PIII;
 typedef pair<double,double> PDD;
 typedef pair<PDD,double> PDDD;
 
-const int N = 1e6 + 10;
+const int N = 1e7 + 10;
 const int MOD = 998244353;
 const double PI = acos(-1);
 const double EPS = 1e-8;
@@ -47,7 +47,7 @@ void solve()
     sort(a.begin() + 1,a.end(),greater<int>());
     for(int i = 1;i <= n;i++) a[i] += a[i-1];
 
-    int l = 1,r = n;
+    int l = 0,r = n;
     while(r > l)
     {
         int mid = l + r + 1 >> 1;
@@ -60,7 +60,7 @@ void solve()
 
 int main()
 {
-    get_primes(1000000);
+    get_primes(N - 1);
     int T = 1;
     cin >> T;
     while(T--) solve();

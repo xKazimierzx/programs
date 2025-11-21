@@ -24,7 +24,6 @@ void solve()
 {
     int n;
     cin >> n;
-
     map<LL,LL> h;
     LL maxv = 0;
     for(int i = 0;i < n;i++)

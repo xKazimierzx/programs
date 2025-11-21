@@ -23,5 +23,6 @@
     "regex": "cpp",
     "valarray": "cpp",
     "cmath": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }

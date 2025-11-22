@@ -31,7 +31,43 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    int n;
+    cin >> n;
+    vector<int> a(n),b(n);
+    int ca = 0,cb = 0;
+    for(int i = 0;i < n;i++)
+    {
+        cin >> a[i];
+        if(a[i]) ca++;
+    }
+    for(int i = 0;i < n;i++)
+    {
+        cin >> b[i];
+        if(b[i]) cb++;
+    }
+
+    for(int i = 0;i < n;i++)
+    {
+        if(a[i] == b[i]) continue;
+        if(i & 1)
+        {
+            if(cb % 2 == 0)
+            {
+                if(a[i]) cb++,ca--;
+                else  cb--,ca++;
+            }
+        }else{
+            if(ca % 2 == 0)
+            {
+                if(a[i]) cb++,ca--;
+                else  cb--,ca++;
+            }
+        }
+    }
+
+    if(ca & 1 && cb % 2 == 0) cout << "Ajisai" << endl;
+    else if(ca % 2 == 0 && cb & 1) cout << "Mai" << endl;
+    else cout << "Tie" << endl;
 }
 
 int main()

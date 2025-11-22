@@ -31,7 +31,13 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    int n;
+    cin >> n;
+    int ans = 0;
+    for(int i = 0;i <= n / 4;i++)
+        for(int j = 0;j <= n / 2;j++)
+            if(i * 4 + j * 2 == n) ans++;
+    cout << ans << endl;
 }
 
 int main()

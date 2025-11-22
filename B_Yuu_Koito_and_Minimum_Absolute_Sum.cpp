@@ -31,7 +31,25 @@ const int DEP = 31;
 
 void solve()
 {
-    
+    //abs(an - a1)_min
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    int ans = 0;
+    for(int i = 0;i < n;i++)
+    {
+        cin >> a[i];
+        if(a[i] == -1 && i != n - 1 && i) a[i] = 0;
+    }
+
+    if(a[n - 1] == -1 && a[0] != -1) a[n - 1] = a[0];
+    else if(a[0] == -1 && a[n - 1] != -1) a[0] = a[n - 1];
+    else if(a[n - 1] == -1 && a[0] == -1) a[n - 1] = a[0] = 0;
+    else ans = abs(a[n - 1] - a[0]);
+
+    cout << ans << endl;
+    for(int i = 0;i < n;i++) cout << a[i] << ' ';
+    cout << endl;
 }
 
 int main()

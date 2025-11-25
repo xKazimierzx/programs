@@ -64,27 +64,14 @@ struct DSU{
 void solve()
 {
     int n;
-    cin >> n;
-    DSU p(n);
-    vector<int> a(n + 1);
-    for(int i = 1;i <= n;i++) cin >> a[i];
-    
-    stack<int> stk;
-    for(int i = 1;i <= n;i++)
-    {
-        int t = a[i];
-        while(stk.size() && t > a[stk.top()])
-        {
-            p.merge(i,stk.top());
-            a[i] = min(a[i],a[stk.top()]);
-            stk.pop();
-        }
-        stk.push(i);
-    }   
+    cin >> n;    
+    vector<int> a(n + 1),pre(n + 1,n),suf(n + 2),id(n + 1);
+    for(int i = 1;i <= n;i++) cin >> a[i],id[a[i]] = i;
+    for(int i = 1;i <= n;i++) pre[i] = min(pre[i - 1],a[i]);
+    for(int i = n;i >= 1;i--) suf[i] = max(suf[i + 1],a[i]);
 
-    int r = p.find(1);
     for(int i = 2;i <= n;i++)
-        if(p.find(i) != r)
+        if(pre[i - 1] > suf[i])
         {
             cn;
             return;

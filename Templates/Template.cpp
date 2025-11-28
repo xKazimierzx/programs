@@ -13,8 +13,7 @@ using namespace std;
 using LL = long long;
 using ULL = unsigned long long;
 using UI = unsigned int;
-using I128 = __int128;
-using U128 = unsigned __int128;
+using LD = long double;
 using PII = pair<int,int>;
 using PDD = pair<double,double>;
 

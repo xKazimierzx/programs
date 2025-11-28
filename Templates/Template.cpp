@@ -5,29 +5,33 @@ using namespace std;
 #define ls(x) (x << 1)
 #define rs(x) (x << 1 | 1)
 #define lowbit(x) (x & (-x))
-#define bp(x) __builtin_poptount(x)
-#define bpll(x) __builtin_poptountll(x)
-#define rep(i,a,b) for(int i = a;i <= b;++i)
-#define rep_(i,a,b) for(int i = a;i >= b;--i)
-#define debug(x) cout << x << '\n'
 #define cy cout << "Yes" << '\n'
 #define cn cout << "No" << '\n'
 #define x first
 #define y second
 
-typedef long long LL;
-typedef unsigned long long ULL;
-typedef long double LD;
-typedef pair<int,int> PII;
-typedef pair<int,PII> PIII;
-typedef pair<double,double> PDD;
-typedef pair<double,PDD> PDDD;
+using LL = long long;
+using ULL = unsigned long long;
+using UI = unsigned int;
+using I128 = __int128;
+using U128 = unsigned __int128;
+using PII = pair<int,int>;
+using PDD = pair<double,double>;
 
 const int N = 1e5 + 10;
 const int MOD = 998244353;
 const double PI = acos(-1);
 const double EPS = 1e-8;
 const int DEP = 31;
+const int INF32 = INT_MAX; 
+const LL INF64 = LONG_LONG_MAX;
+
+int popcnt(int x) {return __builtin_popcount(x);}
+int popcnt(UI x) {return __builtin_popcount(x);}
+int popcnt(LL x) {return __builtin_popcountll(x);}
+int popcnt(ULL x) {return __builtin_popcountll(x);}
+int sign(double x) {return fabs(x) < EPS ? 0 : (x < 0 ? -1 : 1);}
+int dcmp(double x,double y) {return fabs(x -  y) < EPS ? 0 : (x < y ? -1 : 1);}
 
 void solve()
 {
